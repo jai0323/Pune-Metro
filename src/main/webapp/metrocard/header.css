@@ -1,0 +1,184 @@
+.ubuntu-medium{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+  }
+
+  
+* {
+    color: black;
+}
+
+.puneheading
+{
+    padding-right: 235px;
+    font-size: 27px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    width: 100%;
+    background-color: white;
+    color: black; 
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 10px; /* Remove default margin */
+    padding: 10px; /* Remove default padding */
+    
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: 0 5px; /* Adjust margin */
+    font-size: 16px; /* Decrease font size */
+    
+}
+nav a{
+    text-decoration: none;
+}
+
+.nav2 {
+    background-color: #55528D;
+    height: 50px;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+}
+
+.nav2 ul {
+    margin: 0; /* Remove default margin */
+    padding: 160px; /* Remove default padding */
+}
+
+.nav2 ul li {
+    list-style-type:none;
+    margin: 0 20px; /* Adjust margin */
+    font-size: 17.5px; /* Increase font size for better readability */
+}
+
+.nav2 a {
+    color: white; /* Set font color to white */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold; /* Apply bold font weight */
+    transition: color 0.3s; /* Add smooth color transition effect */
+}
+
+.nav2 a:hover {
+    color: #000000; /* Change link color on hover */
+} 
+.nav2 a:hover{
+    color: #000000;
+}
+
+.icon {
+    align-items: right;
+    font-size: 20px;
+    margin-right: 12px;
+    color: #ffffff;
+    display: none;
+    padding-left: 240px; /* Adjust padding-left */
+}
+
+
+.sidebar {
+    position: absolute;
+    right: 0px;
+    top: 63px;
+    right: 0;
+    height: 100vh;
+    width: 200px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.258);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: #000000;
+}
+
+.sidebar li {
+    list-style: none;
+    padding: 10px 20px;
+    color: white; /* Text color */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Add transition effect for hover */
+}
+
+.sidebar li:hover {
+    color:black; /* Change text color on hover */
+}
+
+.sidebar li a {
+    color: black; /* Link color */
+    text-decoration: none;
+}
+
+.sidebar li a:hover {
+    text-decoration: underline; /* Add underline effect on hover */
+}
+
+
+
+@media only screen and (max-width: 890px) {
+    .hidecontent {
+        display: none;
+    }
+    .icon {
+        display: flex;
+    }
+}
+@media only screen and (max-width:1400px)
+{
+    .puneheading
+    {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .puneheading {
+       display: none;
+    }
+    
+}
+@media only screen and (min-width:1100px)
+{
+    .sidebar{
+        display: none;
+    }
+}
+
+.services
+        {
+            
+            left: 660px;
+            top: 100px;
+            position:absolute;
+            z-index: 900;
+            width: 200px;
+            height: auto;
+            background-color: #55528D;
+            border-radius: 15px;
+        }
+        .services li{
+            list-style: none;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            color: white;
+            padding-left: none;
+        }
+        .services li:hover{
+            color: black;
+        }
+        #arrowup :hover
+        {
+            color: black;
+        }
+        #arrowdown :hover{
+            color: #000;
+        }

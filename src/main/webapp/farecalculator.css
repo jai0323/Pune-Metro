@@ -1,0 +1,313 @@
+
+body{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+}
+
+* {
+    color: black;
+}
+
+.puneheading
+{
+    padding-right: 235px;
+     font-size: 27px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    width: 100%;
+    background-color: white;
+    color: black; 
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 10px; /* Remove default margin */
+    padding: 10px; /* Remove default padding */
+    
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: 0 5px; /* Adjust margin */
+    font-size: 14px; /* Decrease font size */
+    
+}
+nav a{
+    text-decoration: none;
+}
+
+.nav2 {
+    background-color: #55528D;
+    height: 50px;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+}
+
+.nav2 ul {
+    margin: 0; /* Remove default margin */
+    padding: 160px; /* Remove default padding */
+}
+
+.nav2 ul li {
+    list-style-type:none;
+    margin: 0 20px; /* Adjust margin */
+    font-size: 17.5px; /* Increase font size for better readability */
+}
+
+.nav2 a {
+    color: white; /* Set font color to white */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold; /* Apply bold font weight */
+    transition: color 0.3s; /* Add smooth color transition effect */
+}
+
+.nav2 a:hover {
+    color: #000000; /* Change link color on hover */
+} 
+
+.icon {
+    align-items: right;
+    font-size: 20px;
+    margin-right: 12px;
+    color: #ffffff;
+    display: none;
+    padding-left: 240px; /* Adjust padding-left */
+}
+
+.sidebar {
+    position: fixed;
+    top: 63px;
+    right: 0;
+    height: 100vh;
+    width: 200px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.258);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: #000000;
+}
+
+.sidebar li {
+    list-style: none;
+    padding: 10px 20px;
+    color: white; /* Text color */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Add transition effect for hover */
+}
+
+.sidebar li:hover {
+    color:black; /* Change text color on hover */
+}
+
+.sidebar li a {
+    color: black; /* Link color */
+    text-decoration: none;
+}
+
+.sidebar li a:hover {
+    text-decoration: underline; /* Add underline effect on hover */
+}
+
+/* Style the close icon */
+.sidebar .fa-xmark {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Adjust padding and margin for the content */
+.sidebar > div {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 890px) {
+    .hidecontent {
+        display: none;
+    }
+    .icon {
+        display: flex;
+    }
+}
+@media only screen and (max-width:1400px)
+{
+    .puneheading
+    {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .puneheading {
+       display: none;
+    }
+    
+}
+/*here the css for the nav bar is end*/
+
+
+/*end of header css*/
+
+#farecalculatorheading{
+    font-size: 30px;
+    margin-left: 100px;
+    
+}
+#farecalculatorheading h2{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #55528dce;
+}
+
+.fare-calculator-box{
+    border: 0.5px solid grey;
+    height: 190px;
+    width: 1330px;
+    border-radius: 16px;
+    margin-left: 90px;  
+    margin-top: 60px; 
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.fare-calculator-box1{
+    padding-top: 20px;
+    margin-left: 40px;
+}
+.fare-calculator-box-selection select
+{
+    height: 40px;
+    width: 400px;
+    font-size: 16px;
+    margin-left: 45px;
+    border: 1px solid rgb(50, 25, 148);
+    border-radius: 8px;
+    background-color: white;
+    transition: transform 0.3s ease;  
+
+}
+
+.fare-calculator-box-selection label{
+    margin-left: 10px;
+    color: #ca5ca6;
+    font-size: 18px;
+}
+.fare-calculator-box-selection input
+{
+    height: 38px;
+    width: 150px;
+    background-color: #ca5ca6;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    margin-left: 50px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+.fare-calculator-box-selection input:hover{
+    background-color: blueviolet;
+}
+.fare-calculator-box-selection select:hover{
+    border: 3px solid rgb(142, 142, 225);
+    transform: matrix();
+}
+.fare-calculator-box-selection option:hover{
+    background-color: blue;
+}
+.source-destination{
+    display: flex;
+    align-items: center;
+}
+.s-d{
+    margin-top: 50px;
+    font-size: 20px;
+}
+#fromlabel
+{
+    margin-left: 10px;
+    color: rgba(43, 38, 38, 0.642);
+    margin-top: 50px;
+
+}
+#tolabel{
+    margin-left: 50px;
+    color: rgba(43, 38, 38, 0.642);
+    margin-top: 25px;
+
+
+}
+#fare{
+   font-size: 23px;
+}
+.rupeesicon{
+    margin-top: 24px;
+    size: 20px;
+    color: #ca5ca6;
+}
+
+.totalfare
+{
+    
+    padding-left: 10px;
+    padding-top: 9px;
+    font-family: "Ubuntu", sans-serif;
+
+}
+#fareResult
+{
+    color: #cc3e9d;
+    font-size: 29px;
+    font-family: "Ubuntu", sans-serif;
+}
+#selectedSource{
+    margin-left: 5px;
+    text-decoration: bold;
+    font-size: 24px;
+    font-family: "Ubuntu", sans-serif;
+}
+#selectedDestination{
+    margin-left: 5px;
+    text-decoration: bold;
+    font-size: 24px;
+    font-family: "Ubuntu", sans-serif;
+}
+.fareimg
+{
+    height: 45px;
+}
+
+
+.timetableimg{
+    margin-left: 100px;
+    margin-top: 50px;
+    
+}
+.timetableimg button{
+    
+    border-top-left-radius: 10px;   
+    border-top-right-radius: 10px; 
+    height: 40px;
+    width: 100px;
+    font-size: 17px;
+    border: none;
+}
+hr{
+    margin-left: 100px;
+    width: 1310px;
+}
+#fareimg
+{
+    width: 1310px;
+    margin-left: 100px;
+    height: 1000px;
+}

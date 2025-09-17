@@ -1,0 +1,331 @@
+
+
+
+/* Footer Container */
+/* CSS Styles for the footer */
+.footer {
+    background-color: #55528D;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    
+    bottom: 0;
+    width: 100%;
+}
+
+.footer .container a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.footer .container a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.footer .container a:first-child {
+    margin-left: 0;
+}
+
+.footer .container a:last-child {
+    margin-right: 0;
+}
+
+.visitorcounter
+{
+    position: absolute;
+    right: 0px;
+    margin-top: auto;
+    margin-bottom:-1px;
+    right:340px;
+}
+.footerimage
+{
+   width: 100px;
+   height: 100px;
+
+}
+/*header css*/
+
+.ubuntu-medium{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+  }
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.slider .slide {
+    position: absolute;
+    bottom: 0!important;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slide 25s infinite;
+}
+
+.slider .slide:nth-child(1) {
+    animation-delay: -0s;
+}
+
+.slider .slide:nth-child(2) {
+    animation-delay: -5s;
+}
+
+.slider .slide:nth-child(3) {
+    animation-delay: -10s;
+}
+
+.slider .slide:nth-child(4) {
+    animation-delay: -15s;
+}
+
+.slider .slide:nth-child(5) {
+    animation-delay: -20s;
+}
+
+@keyframes slide {
+    0%, 15%, 100% {
+        transform: translateX(0);
+        animation-timing-function: ease;
+    }
+
+    20% {
+        transform: translateX(-100%);
+        animation-timing-function: step-end;
+    }
+
+    95% {
+        transform: translateX(100%);
+        animation-timing-function: ease;
+    }
+}
+
+.social_media_group {
+    position: fixed;
+    right: -20px;
+    top: 362px;
+    transform: translateY(-50%);
+    width: 50px;
+    height: auto;
+    border-radius: 10px 0 0 10px;
+    background-color: #fff;
+    z-index: 999;
+    padding: 10px;
+    box-shadow: 0px 2px 4px 2px rgba(183, 189, 203, 0.3);
+}
+
+.social_media_group ul {
+    padding: 0;
+    margin: 0;
+}
+
+.social_media_group li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.social_media_group li:last-child {
+    margin-bottom: 0;
+}
+
+.social_media_group img {
+    width: 30px;
+    height: auto;
+    display: block;
+}
+
+.time-table-btn-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+
+.slide {
+    position: relative;
+}
+
+.slide-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+.slide-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.slide-text p {
+    font-size: 16px;
+}
+
+
+/* style1.css */
+
+* {
+    color: black;
+}
+
+.puneheading
+{
+    padding-right: 235px;
+     font-size: 27px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    width: 100%;
+    background-color: white;
+    color: black; 
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 10px; /* Remove default margin */
+    padding: 10px; /* Remove default padding */
+    
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: 0 5px; /* Adjust margin */
+    font-size: 14px; /* Decrease font size */
+    
+}
+nav a{
+    text-decoration: none;
+}
+
+.nav2 {
+    background-color: #55528D;
+    height: 50px;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+}
+
+.nav2 ul {
+    margin: 0; /* Remove default margin */
+    padding: 160px; /* Remove default padding */
+}
+
+.nav2 ul li {
+    list-style-type:none;
+    margin: 0 20px; /* Adjust margin */
+    font-size: 17.5px; /* Increase font size for better readability */
+}
+
+.nav2 a {
+    color: white; /* Set font color to white */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold; /* Apply bold font weight */
+    transition: color 0.3s; /* Add smooth color transition effect */
+}
+
+.nav2 a:hover {
+    color: #000000; /* Change link color on hover */
+} 
+
+.icon {
+    align-items: right;
+    font-size: 20px;
+    margin-right: 12px;
+    color: #ffffff;
+    display: none;
+    padding-left: 240px; /* Adjust padding-left */
+}
+
+.sidebar {
+    position: fixed;
+    top: 63px;
+    right: 0;
+    height: 100vh;
+    width: 200px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.258);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: #000000;
+}
+
+.sidebar li {
+    list-style: none;
+    padding: 10px 20px;
+    color: white; /* Text color */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Add transition effect for hover */
+}
+
+.sidebar li:hover {
+    color:black; /* Change text color on hover */
+}
+
+.sidebar li a {
+    color: black; /* Link color */
+    text-decoration: none;
+}
+
+.sidebar li a:hover {
+    text-decoration: underline; /* Add underline effect on hover */
+}
+
+/* Style the close icon */
+.sidebar .fa-xmark {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Adjust padding and margin for the content */
+.sidebar > div {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 890px) {
+    .hidecontent {
+        display: none;
+    }
+    .icon {
+        display: flex;
+    }
+}
+@media only screen and (max-width:1400px)
+{
+    .puneheading
+    {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .puneheading {
+       display: none;
+    }
+    
+}

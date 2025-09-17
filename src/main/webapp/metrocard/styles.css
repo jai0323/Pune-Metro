@@ -1,0 +1,1271 @@
+#sizecontainer{
+    overflow-x: hidden;
+}
+
+.ubuntu-medium{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+  }
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+ /* CSS for the loading screen */
+ #loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999; /* Ensure it's on top of everything */
+    background-color: white;
+    display: flex; /* Make it a flex container */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+#loading-screen p{
+   position: relative;
+   margin-top: 120px;
+}
+
+#loadingimg {
+    z-index: 99999;
+    width: 300px;
+    height: auto;
+}
+
+
+.slider .slide {
+    position: absolute;
+    bottom: 0!important;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slide 25s infinite;
+}
+
+.slider .slide:nth-child(1) {
+    animation-delay: -0s;
+}
+
+.slider .slide:nth-child(2) {
+    animation-delay: -5s;
+}
+
+.slider .slide:nth-child(3) {
+    animation-delay: -10s;
+}
+
+.slider .slide:nth-child(4) {
+    animation-delay: -15s;
+}
+
+.slider .slide:nth-child(5) {
+    animation-delay: -20s;
+}
+
+@keyframes slide {
+    0%, 15%, 100% {
+        transform: translateX(0);
+        animation-timing-function: ease;
+    }
+
+    20% {
+        transform: translateX(-100%);
+        animation-timing-function: step-end;
+    }
+
+    95% {
+        transform: translateX(100%);
+        animation-timing-function: ease;
+    }
+}
+
+.social_media_group {
+    position: fixed;
+    right: -20px;
+    top: 362px;
+    transform: translateY(-50%);
+    width: 50px;
+    height: auto;
+    border-radius: 10px 0 0 10px;
+    background-color: #fff;
+    z-index: 999;
+    padding: 10px;
+    box-shadow: 0px 2px 4px 2px rgba(183, 189, 203, 0.3);
+}
+
+.social_media_group ul {
+    padding: 0;
+    margin: 0;
+}
+
+.social_media_group li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.social_media_group li:last-child {
+    margin-bottom: 0;
+}
+
+.social_media_group img {
+    width: 30px;
+    height: auto;
+    display: block;
+}
+
+.time-table-btn-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+
+.slide {
+    position: relative;
+}
+
+.slide-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+.slide-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.slide-text p {
+    font-size: 16px;
+}
+
+
+/* complete css for the header and the service list */
+.ubuntu-medium{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+  }
+
+  
+* {
+    color: black;
+}
+
+.puneheading
+{
+    padding-right: 235px;
+    font-size: 30px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    width: 100%;
+    background-color: white;
+    color: black; 
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 10px; /* Remove default margin */
+    padding: 10px; /* Remove default padding */
+    
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: 0 5px; /* Adjust margin */
+    font-size: 16px; /* Decrease font size */
+    
+}
+nav a{
+    text-decoration: none;
+}
+
+.nav2 {
+    background-color: #55528D;
+    height: 50px;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+}
+
+.nav2 ul {
+    margin: 0; /* Remove default margin */
+    padding: 160px; /* Remove default padding */
+}
+
+.nav2 ul li {
+    list-style-type:none;
+    margin: 0 20px; /* Adjust margin */
+    font-size: 18.5px; /* Increase font size for better readability */
+}
+
+.nav2 a {
+    color: white; /* Set font color to white */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold; /* Apply bold font weight */
+    transition: color 0.3s; /* Add smooth color transition effect */
+}
+
+.nav2 a:hover {
+    color: #000000; /* Change link color on hover */
+} 
+.nav2 a:hover{
+    color: #000000;
+}
+
+.icon {
+    position: absolute;
+    font-size: 20px;
+    color: #ffffff;
+    display: none;
+    right: 50px; /* Adjust padding-left */
+}
+#punemetrologo
+{
+    width: 100px;
+    height: 100;
+    padding-left: 30px;
+    padding-top: 60px;
+    cursor: pointer;
+}
+
+.sidebar {
+    position: absolute; 
+    top: 65px; /* Adjust as needed */
+    right: 0px; /* Adjust as needed */
+    height: 100vh;
+    width: 200px;
+    z-index: 999;
+    background-color: #86A7FC(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.258);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: #000000;
+}
+
+
+
+.sidebar li {
+    list-style: none;
+    padding: 10px 20px;
+    color: black; /* Text color */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Add transition effect for hover */
+}
+
+.sidebar li:hover {
+    color:black; /* Change text color on hover */
+}
+
+.sidebar li a {
+    color: black; /* Link color */
+    text-decoration: none;
+}
+
+.sidebar li a:hover {
+    text-decoration: underline; /* Add underline effect on hover */
+}
+
+
+
+@media only screen and (max-width: 896px) {
+    .hidecontent {
+        display: none;
+    }
+    .icon {
+        display: flex;
+    }
+    .sidebar{
+        display: none;
+    }
+    .puneheading
+    {
+        padding-right: 100px;
+        
+    }
+    .footer{
+        height: 200px;
+        width: 750px;
+        background-color: #55528d;
+        color: white;
+    }
+    #visitorno
+    {
+        margin-left: 20px;
+    }
+   
+}
+@media only screen and (max-width:1400px)
+{
+    .puneheading
+    {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .puneheading {
+        font-size: 16px;
+    }
+    
+}
+@media only screen and (max-width: 1100px) {
+    
+    .complainticon
+    {
+        display: none;
+    }
+    #whatsAppicon
+    {
+        display: none;
+    }
+    .footer{
+        height: 200px;
+        width: 1100px;
+        background-color: #55528d;
+        color: white;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .sidebar {
+        display: none; /* Hide the sidebar when the viewport width is 768px or less */
+    }
+}
+
+
+
+.services
+        {
+            left: 655px;
+            top: 108px;
+            position:absolute;
+            z-index: 900;
+            width: 167px;
+            height: auto;
+            background-color: #55528D;
+            border-radius: 15px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 18px;
+        }
+
+#serviceul{
+    padding-top: 0px;
+}
+
+        .services li{
+            list-style: none;
+            text-decoration: none;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            color: white;
+            padding-left: -5px;
+        }
+        .services ul li a{
+            list-style: none;
+            text-decoration: none;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            color: white;
+            padding-left: -5px;
+        }
+        .services ul li a:hover{
+            color: black;
+        }
+        #arrowup :hover
+        {
+            color: black;
+        }
+        #arrowdown :hover{
+            color: #000;
+        }
+
+/* css for services list */
+
+/* Style the close icon */
+.sidebar .fa-xmark {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+.hidecontent{
+    font-size: 13px;
+}
+.sizebuttons{
+    margin-left: 5px; 
+    font-size: 13px;
+}
+
+/* Adjust padding and margin for the content */
+.sidebar > div {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#language
+{
+    position: absolute;
+    top: 40px;
+    width: 150px;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 890px) {
+    .hidecontent {
+        display: none;
+    }
+    .icon {
+        display: flex;
+    }
+    #newdcontainer{
+        display: none;
+    }
+    
+    .services{
+        display: none
+    }
+}
+@media only screen and (max-width:1400px)
+{
+    .puneheading
+    {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    
+    
+    
+}
+@media only screen and (max-width: 1330px) {
+
+    #newdcontainer{
+        display: none;
+    }
+    #servicetabs
+    {
+        position: absolute;
+        right: 20px;
+    }
+}
+/*here the css for the nav bar is end*/
+
+
+/*here the css for the nav bar is end*/
+
+
+/* Footer Container */
+/* CSS Styles for the footer */
+.footer {
+	background-image: url('../images/footer.png'); /* Path to your image */
+    background-size: cover;        /* Cover the entire footer */
+    background-position: center;   /* Center the image */
+    background-repeat: no-repeat;  /* Do not repeat */
+    
+    /* Optional: overlay for darker effect */
+    position: relative;
+	
+    background-color: #55528D;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    
+    bottom: 0;
+    width: 100%;
+}
+
+.footer .container a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.footer .container a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.footer .container a:first-child {
+    margin-left: 0;
+}
+
+.footer .container a:last-child {
+    margin-right: 0;
+}
+
+.visitorcounter
+{
+    position: absolute;
+    right: 0px;
+    top: 455px;
+    right:290px;
+}
+.footerimage
+{
+   width: 100px;
+   height: 100px;
+
+}
+
+/* css for the plan your journy box*/
+.plan-your-jrny-box {
+    position: absolute;
+    right: 100px;
+    top: 450px;
+    transform: translateY(-50%);
+    width: 400px;
+    height: 363px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #fff;
+    z-index: 900;
+    padding: 10px;
+    box-shadow: 0px 2px 4px 2px rgba(183, 189, 203, 0.3);
+}
+.plan-your-jrny-box1
+{
+    padding: 0px 24px 24px 24px;
+    margin: 5px 5px;
+}
+
+.plan-your-jrny-box-heading{
+    font-size: 15px;
+    margin-top: 0px;
+}
+
+.plan-your-jrny-box-selection select{
+    padding: 9.6px 36px 9.6px 12px;
+    width: 355px;
+    height: 45px;
+    margin: 12px 0px 12px 0px;
+    font: 16px;
+    border: 2px solid black;
+    border-radius: 5px;
+
+}
+.plan-your-jrny-box-selection input
+{
+    width: 235px;
+    height: 45px;
+    background-color: #C868A8;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    margin-top: 40px;
+    font-weight: bold;
+    transition: transform 0.4s ease-in-out;
+    cursor: pointer; 
+}
+.plan-your-jrny-box-selection input:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
+    background-color: blueviolet;
+}
+.plan-your-jrny-box-label
+{
+    color: #C868A8;
+    font-weight: bold;
+    font-size: 17px;
+}
+.plan-your-jrny-box-reset
+{
+    text-decoration: none;
+    color: blue;
+    transition: transform 0.4s ease-in-out; 
+    cursor: pointer;
+
+}
+.plan-your-jrny-box-reset a:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
+}
+/* Style for select tags */
+.plan-your-jrny-box-selection select {
+    font-size: 16px;
+}
+
+/* Style for option tags */
+.plan-your-jrny-box-selection option {
+    color: #000; /* Dark black color */
+}
+
+/* Hover effect for options */
+.plan-your-jrny-box-selection option:hover {
+    background-color: #d31717; /* Light gray background color */
+    cursor: pointer;
+}
+#calculateFareButton:hover{
+    background-color: blueviolet;
+}
+
+/* css for the quote*/
+.quote
+{
+    position: absolute;
+    right: 720px;
+    top: 620px;
+    transform: translateY(-50%);
+    border-radius: 10px 10px 10px 10px;
+    z-index: 999;
+    padding: 10px;
+    color: #ffffff;
+}
+.quote1{
+    color: white;
+    font-size: 50px;
+    line-height: 55px;
+    font-weight: 300;
+    text-shadow: 2px 2px 5px #3C3C44;
+}
+.quote2
+{
+    font-weight: bold;
+    font-size: 60px;
+    text-transform: uppercase;
+    color: white;
+}
+
+
+/* css for label */
+
+.time-table {
+    width: 395px; /* Set the width of the border */
+    height: 71px; /* Set the height of the border */
+    border: 2px solid #add551; /* Add a solid black border with 2px width */
+    padding: 10px; /* Add padding inside the border */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    border-radius: 10px;
+    transition: transform 0.3s ease;  
+  }
+  
+  .time-table1 {
+    display: flex; /* Use flexbox to align content */
+    align-items: center; /* Center content vertically */
+    text-decoration: none;
+    padding-left: 10px;
+  }
+  
+  .time-table1 img {
+    height: 40px; 
+    width: 40px;/* Set height of the image */
+    margin-right: 10px; /* Add spacing between the image and text */
+    padding-top: 3px;
+  }
+  .time-table a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+  }
+  .time-table1 i{
+    margin-left:auto ;
+  margin-right: 30px;
+  }
+  .time-table:hover
+  {
+    background-color: #add5513d;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  /* css for time table */
+  .metro-card
+  {
+    margin-top: 10px;
+    width: 395px; /* Set the width of the border */
+    height: 71px; /* Set the height of the border */
+    border: 2px solid #2489c4; /* Add a solid black border with 2px width */ /* Add padding inside the border */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+    padding-top: 11px;
+  }
+  .metro-card a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+  }
+  .metro-card:hover
+  {
+    background-color: #2489c469;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .metro-card1 {
+    display: flex; /* Use flexbox to align content */
+    align-items: center; /* Center content vertically */
+    text-decoration: none;
+    padding-left: 10px;
+  }
+  
+  .metro-card1 img {
+    height: 40px; 
+    width: 40px;/* Set height of the image */
+    margin-right: 10px; /* Add spacing between the image and text */
+  }
+  
+  .metro-card1 i{
+    margin-left:auto ;
+  margin-right: 40px;
+  }
+  /* css for metro card */
+  
+  .fare-chart
+  {
+    margin-top: 10px;
+    width: 395px; /* Set the width of the border */
+    height: 71px; /* Set the height of the border */
+    border: 2px solid #66cff5; /* Add a solid black border with 2px width */ /* Add padding inside the border */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+    padding-top: 11px;
+  }
+  .fare-chart a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+  }
+  .fare-chart:hover
+  {
+    background-color: #66cff556;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .fare-chart1 {
+    display: flex; /* Use flexbox to align content */
+    align-items: center; /* Center content vertically */
+    text-decoration: none;
+    padding-left: 10px;
+  }
+  
+  .fare-chart1 img {
+    height: 40px; 
+    width: 40px;/* Set height of the image */
+    margin-right: 10px; /* Add spacing between the image and text */
+  }
+  
+  .fare-chart1 i{
+    margin-left:auto ;
+    margin-right: 40px;
+  }
+  /* css for fare chart */
+  
+  .lostandfound
+  {
+    margin-top: 10px;
+    width: 395px; /* Set the width of the border */
+    height: 71px; /* Set the height of the border */
+    border: 2px solid #f8b57f; /* Add a solid black border with 2px width */ /* Add padding inside the border */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+    padding-top: 11px;
+  }
+  .lostandfound a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+  }
+  .lostandfound:hover
+  {
+    background-color: #f8b67f5e;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .lostandfound1 {
+    display: flex; /* Use flexbox to align content */
+    align-items: center; /* Center content vertically */
+    text-decoration: none;
+    padding-left: 10px;
+  }
+  
+  .lostandfound1 img {
+    height: 40px; 
+    width: 40px;/* Set height of the image */
+    margin-right: 10px; /* Add spacing between the image and text */
+  }
+  
+  .lostandfound1 i{
+    margin-left:auto ;
+    margin-right: 40px;
+  }
+
+  
+/* css for ticket */
+
+
+.Ticket
+{
+  margin-top: 10px;
+  width: 395px; /* Set the width of the border */
+  height: 71px; /* Set the height of the border */
+  border: 2px solid #826fff7e; /* Add a solid black border with 2px width */ /* Add padding inside the border */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+  padding-top: 11px;
+}
+.Ticket a{
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+.Ticket:hover
+{
+  background-color: #826fff7a;
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.Ticket1 {
+  display: flex; /* Use flexbox to align content */
+  align-items: center; /* Center content vertically */
+  text-decoration: none;
+  padding-left: 10px;
+}
+
+.Ticket1 img {
+  height: 40px; 
+  width: 40px;/* Set height of the image */
+  margin-right: 10px; /* Add spacing between the image and text */
+}
+
+.Ticket1 i{
+
+  margin-left:auto ;
+  margin-right: 40px;
+}
+
+
+/* css for COmplaint */
+
+.Complaint
+{
+  margin-top: 10px;
+  width: 395px; /* Set the width of the border */
+  height: 71px; /* Set the height of the border */
+  border: 2px solid #ff204d7d; /* Add a solid black border with 2px width */ /* Add padding inside the border */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+  padding-top: 11px;
+}
+.Complaint a{
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+.Complaint:hover
+{
+  background-color: #ff204d6f;
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.Complaint1 {
+  display: flex; /* Use flexbox to align content */
+  align-items: center; /* Center content vertically */
+  text-decoration: none;
+  padding-left: 10px;
+}
+
+.Complaint1 img {
+  height: 40px; 
+  width: 40px;/* Set height of the image */
+  margin-right: 10px; /* Add spacing between the image and text */
+}
+
+.Complaint1 i{
+
+  margin-left:auto ;
+  margin-right: 40px;
+}
+
+
+
+/* CSS for position of the service tags */
+
+#servicetabs{
+    margin-left: 100px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    display: inline-block;
+    white-space: nowrap;
+    position: relative;
+}
+  
+  /* CSS FOR FOOTER */
+  .ubuntu-medium{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+  }
+
+
+  #serviceandnews{
+    width: 1400px;
+    margin-left: 50px;
+    position: relative;
+    top: 20px;
+  }
+
+/* css for news */
+
+
+.container {
+    max-width: 800px;
+    margin-top: 80px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+   display: inline-block;
+   margin-left: 50px;
+   
+   
+}
+
+.grid-container {
+    overflow-y: auto;
+    height: 460px; /* Adjust the height as needed */
+    padding-right: 20px; /* Add some padding to prevent scrollbar from covering content */
+    overflow: hidden
+}
+.grid-container {
+    overflow: hidden; /* Hide the scrollbar */
+}
+.article {
+    width: calc(100% - 20px); /* Adjust width of articles as needed */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.article img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.article h2 {
+    margin-top: 100px;
+    font-size: 16px;
+}
+.article a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+.article a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+*body
+{
+    padding: 0;
+}
+.footer{
+    height: 200px;
+    width: 100%;
+    background-color: #55528d;
+    color: white;
+}
+#quicklink{
+    padding-left: 0px;
+    padding-top: 20px;
+    font-size: 30px;
+    color: white;
+    position: relative;
+    right: 45%;
+    
+}
+.list{
+    padding-left: none;
+}
+.list ul
+{
+    display: flex;
+}
+.list ul li a{
+    color: #b7add4;
+    text-decoration: none;
+    font-size: 20px;
+}
+.mainbody{
+    margin-left: 100px;
+}
+hr{
+    width: 1340px;
+    margin-right: 100px;
+}
+.list ul li{
+    text-decoration: none;    
+    list-style-type: none;
+    margin-right: 10px;
+    color: white;
+    
+}
+#belowline > div{
+    display: inline-block;
+}
+#rightsreserved{
+    position: relative;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #a09ebfe6;
+    right: 5%;
+}
+
+#visitorno{
+
+    font-size: 13px;
+    position: relative;
+    margin-left: 500px;
+    color: #a09ebf;
+}
+
+#socialmedia{
+    position: relative;
+    margin-left: 50px;
+}
+#socialmedia a{
+    
+    margin-right: 10px;
+}
+
+@media only screen and (max-width:900px)
+{
+    #hrline
+    {
+        width: 800px;
+    }
+}
+
+
+/* notification text */
+
+#notification
+{
+    width: 1290px;
+    position: relative;
+    height: 40px;
+    background-color: #55528d;
+    border-radius: 15px;
+    left: 105px;
+    top: 50px;
+}
+#notification marquee{
+    position: relative;
+    top: 30%;
+   
+}
+
+@media only screen and (max-width:900px)
+{
+
+    #notification
+    {
+        width: 800px;
+    }
+}
+
+@media only screen and (max-width:900px)
+{
+    .social_media_group{
+        display: none;
+    }
+}
+
+
+
+
+/* css for the mobile */
+@media only screen and (max-width: 600px) {
+    .hidecontent {
+        display: none;
+    }
+    .icon {
+        display: flex;
+    }
+    #newdcontainer{
+        display: none;
+    }
+    .puneheading{
+        display: none;
+    }
+    .services{
+        display: none
+    }
+
+    .plan-your-jrny-box{
+        right: 30px;
+        top: 400px;
+        transform: translateY(-50%);
+        width: 310px;
+        height: 363px;
+    }
+    .plan-your-jrny-box-selection select{
+        
+        width: 250px;
+        height: 40px;
+        margin: 12px 0px 12px 0px;
+        font: 14px;
+    }
+
+    .plan-your-jrny-box-selection input{
+
+    width: 150px;
+    height: 40px; 
+    font-size: 13px;
+    margin-top: 30px;
+    }
+
+
+    #notification
+{
+    width: 200px;
+    height: 35px;
+    
+    left: 90px;
+   
+}
+
+.quote
+{
+    right: 20px;
+    top: 700px;
+    padding: 10px;
+    
+}
+.quote1{
+    font-size: 20px;
+}
+.quote2
+{
+    font-size: 25px;
+}
+
+
+#servicetabs
+{
+    margin-left: 40px;
+}
+#serviceandnews
+{
+    width: 300px;
+    margin-left: 15px;
+}
+.Complaint
+{
+  width: 350px; /* Set the width of the border */
+  height: 60px; /* Set the height of the border */
+}
+
+.time-table {
+    width: 350px; /* Set the width of the border */
+    height: 60px; /* Set the height of the border */
+  }
+  .metro-card {
+    width: 350px; /* Set the width of the border */
+    height: 60px; /* Set the height of the border */
+  }
+  .fare-chart {
+    width: 350px; /* Set the width of the border */
+    height: 60px; /* Set the height of the border */
+  }
+  .lostandfound {
+    width: 350px; /* Set the width of the border */
+    height: 60px; /* Set the height of the border */
+  }
+  .Ticket{
+    width: 350px; /* Set the width of the border */
+    height: 60px; /* Set the height of the border */
+  }
+
+
+  .mainbody{
+    margin-left: 45px;
+  }
+  #hrline{
+    width: 300px;
+    padding-left: 5px;
+
+  }
+
+.footer{
+   
+    top: 1000px;
+    height: 100%;
+    width: 390px;
+}
+  #visitorno{
+
+    font-size: 13px;
+    position: relative;
+    margin-left: 60px;
+    color: #a09ebf;
+}
+
+#quicklink{
+    
+margin-left: 70px;
+}
+
+#visitorno{
+
+    margin-top: 40px;
+    position: absolute;
+    left: 10px;
+}
+
+#socialmedia{
+
+    margin-top: 70px;
+}
+
+.list{
+   position: relative;
+   margin-right: 70px;
+
+}
+
+.list ul li{
+    text-decoration: none;    
+    list-style-type: none;
+    margin-right: 20px;
+    color: white;
+    
+}
+
+
+}

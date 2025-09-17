@@ -1,0 +1,109 @@
+.ubuntu-medium{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+  }
+
+*body
+{
+    padding: 0;
+}
+.footer{
+	background-image: url('../images/footer.png'); /* Path to your image */
+    background-size: cover;        /* Cover the entire footer */
+    background-position: center;   /* Center the image */
+    background-repeat: no-repeat;  /* Do not repeat */
+    
+    /* Optional: overlay for darker effect */
+    position: relative;
+	
+    height: 200px;
+    width: 100%;
+    background-color: #55528d;
+    color: white;
+}
+#quicklink{
+    padding-left: 0px;
+    padding-top: 20px;
+    font-size: 30px;
+    color: white;
+    position: relative;
+    right: 45%;
+    
+}
+.list{
+    padding-left: none;
+}
+.list ul
+{
+    display: flex;
+}
+.list ul li a{
+    color: #b7add4;
+    text-decoration: none;
+    font-size: 20px;
+}
+.mainbody{
+    margin-left: 100px;
+}
+#hrline{
+    width: 1310px;
+    margin-right: 100px;
+}
+.list ul li{
+    text-decoration: none;    
+    list-style-type: none;
+    margin-right: 10px;
+    color: white;
+    
+}
+#belowline > div{
+    display: inline-block;
+}
+#rightsreserved{
+    position: relative;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #a09ebfe6;
+    right: 5%;
+}
+
+#visitorno{
+
+    font-size: 13px;
+    position: relative;
+    margin-left: 500px;
+    color: #a09ebf;
+}
+
+#socialmedia{
+    position: relative;
+    margin-left: 50px;
+}
+#socialmedia a{
+    
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 800px){
+
+    .footer{
+        height: 200px;
+        width: 750px;
+        background-color: #55528d;
+        color: white;
+    }
+    #hrline{
+        width: 500px;
+        margin-right: 20px;
+    }
+
+    
+    #visitorno{
+
+        font-size: 13px;
+        position: relative;
+        margin-left: 300px;
+        color: #a09ebf;
+    }
+
+}    
