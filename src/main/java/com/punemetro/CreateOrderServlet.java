@@ -91,7 +91,8 @@ public class CreateOrderServlet extends HttpServlet {
         	rd.forward(request, response);
             // Redirect to PaymentPage.jsp
             
-        } else {
+        } 
+        else {
             response.setContentType("application/json");
             response.getWriter().println("Error creating order: "+ jsonResponse.toString());
         }
