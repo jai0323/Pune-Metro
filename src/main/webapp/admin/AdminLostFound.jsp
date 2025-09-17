@@ -233,7 +233,7 @@
                         <%
                         String url = "jdbc:mysql://localhost:3306/pune_metro";
                         String user = "root";
-                        String pass = "";
+                        String pass = "password";
             
                         try {
                             Class.forName("com.mysql.jdbc.Driver");

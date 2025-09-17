@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Station Map & Routing</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <!-- Leaflet Routing Machine CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+  <style>
+    body{font-family: Arial, Helvetica, sans-serif; margin:0; padding:10px;}
+    #map{height:70vh; border:1px solid #ccc; margin-top:10px;}
+    .controls{display:flex; gap:12px; flex-wrap:wrap; align-items:center;}
+    select{padding:6px;}
+    label{font-weight:600;}
+  </style>
+</head>
+<body>
+
+  <div class="controls">
+    <div>
+      <label for="origin">From</label><br>
+      <select id="origin">
+        <option value="0">-- Select Station --</option>
+        <option value="1">PCMC</option>
+        <option value="2">Sant Tukaram Nagar</option>
+        <option value="3">Bhosari</option>
+        <option value="4">Kasarwadi</option>
+        <option value="5">Phugewadi</option>
+        <option value="6">Dapodi</option>
+        <option value="7">Bopodi</option>
+        <option value="11">Shivaji Nagar</option>
+        <option value="12">Civil Court</option>
+        <option value="17">Vanaz</option>
+        <option value="18">Anand Nagar</option>
+        <option value="19">Ideal Colony</option>
+        <option value="20">Nal Stop</option>
+        <option value="21">Garware College</option>
+        <option value="22">Deccan Gymkhana</option>
+        <option value="23">Chhatrapati Sambhaji Udyan</option>
+        <option value="24">PMC</option>
+        <option value="25">Mangalwar Peth</option>
+        <option value="26">Pune Railway Station</option>
+        <option value="27">Ruby Hall Clinic</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="destination">To</label><br>
+      <select id="destination">
+        <option value="0">-- Select Station --</option>
+        <option value="1">PCMC</option>
+        <option value="2">Sant Tukaram Nagar</option>
+        <option value="3">Bhosari</option>
+        <option value="4">Kasarwadi</option>
+        <option value="5">Phugewadi</option>
+        <option value="6">Dapodi</option>
+        <option value="7">Bopodi</option>
+        <option value="11">Shivaji Nagar</option>
+        <option value="12">Civil Court</option>
+        <option value="17">Vanaz</option>
+        <option value="18">Anand Nagar</option>
+        <option value="19">Ideal Colony</option>
+        <option value="20">Nal Stop</option>
+        <option value="21">Garware College</option>
+        <option value="22">Deccan Gymkhana</option>
+        <option value="23">Chhatrapati Sambhaji Udyan</option>
+        <option value="24">PMC</option>
+        <option value="25">Mangalwar Peth</option>
+        <option value="26">Pune Railway Station</option>
+        <option value="27">Ruby Hall Clinic</option>
+      </select>
+    </div>
+
+    <div>
+      <button id="fitAll">Fit All Stations</button>
+      <button id="clearRoute">Clear Route</button>
+    </div>
+  </div>
+
+  <div id="map"></div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Leaflet Routing Machine (uses OSRM demo server by default) -->
+  <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script>
+
+  <script>
+    // --- Replace / fill lat/lng values below with accurate coordinates for each station ---
+    // If coordinates are unknown, set lat/lng to null and the marker won't be shown until you fill it.
+    const stations = [
+      {id:1, name:"PCMC", lat:18.6298, lng:73.7997},
+      {id:2, name:"Sant Tukaram Nagar", lat:null, lng:null},
+      {id:3, name:"Bhosari", lat:null, lng:null},
+      {id:4, name:"Kasarwadi", lat:null, lng:null},
+      {id:5, name:"Phugewadi", lat:null, lng:null},
+      {id:6, name:"Dapodi", lat:null, lng:null},
+      {id:7, name:"Bopodi", lat:null, lng:null},
+      {id:11, name:"Shivaji Nagar", lat:18.5266, lng:73.8562},
+      {id:12, name:"Civil Court", lat:null, lng:null},
+      {id:17, name:"Vanaz", lat:null, lng:null},
+      {id:18, name:"Anand Nagar", lat:null, lng:null},
+      {id:19, name:"Ideal Colony", lat:null, lng:null},
+      {id:20, name:"Nal Stop", lat:null, lng:null},
+      {id:21, name:"Garware College", lat:null, lng:null},
+      {id:22, name:"Deccan Gymkhana", lat:18.5204, lng:73.8526},
+      {id:23, name:"Chhatrapati Sambhaji Udyan", lat:null, lng:null},
+      {id:24, name:"PMC", lat:null, lng:null},
+      {id:25, name:"Mangalwar Peth", lat:null, lng:null},
+      {id:26, name:"Pune Railway Station", lat:18.5313, lng:73.8762},
+      {id:27, name:"Ruby Hall Clinic", lat:18.5205, lng:73.8553}
+    ];
+
+    // Initialize map (centered roughly in Pune)
+    const map = L.map('map').setView([18.5204, 73.8567], 12);
+
+    // OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Add markers for stations with known coords
+    const markers = {};
+    const group = L.featureGroup().addTo(map);
+    stations.forEach(s => {
+      if (s.lat !== null && s.lng !== null) {
+        const m = L.marker([s.lat, s.lng]).bindPopup(`<strong>${s.name}</strong>`);
+        m.addTo(group);
+        markers[s.id] = m;
+      }
+    });
+
+    // Fit to all existing markers
+    function fitAll() {
+      if (group.getLayers().length) {
+        map.fitBounds(group.getBounds().pad(0.2));
+      } else {
+        map.setView([18.5204, 73.8567], 12);
+      }
+    }
+    document.getElementById('fitAll').addEventListener('click', fitAll);
+    fitAll();
+
+    // Routing control variable (so we can clear / replace it)
+    let routingControl = null;
+
+    function getStationById(id){
+      return stations.find(s => s.id === Number(id)) || null;
+    }
+
+    function buildRoute() {
+      const fromId = document.getElementById('origin').value;
+      const toId = document.getElementById('destination').value;
+
+      // remove existing route if any
+      if (routingControl) {
+        map.removeControl(routingControl);
+        routingControl = null;
+      }
+
+      if (fromId === "0" && toId === "0") return;
+
+      // If only one chosen, center on it and open popup
+      if (fromId !== "0" && toId === "0") {
+        const s = getStationById(fromId);
+        if (s && s.lat!=null) {
+          map.setView([s.lat, s.lng], 15);
+          markers[s.id]?.openPopup();
+        } else {
+          alert('Coordinates missing for selected station. Please provide lat/lng.');
+        }
+        return;
+      }
+      if (fromId === "0" && toId !== "0") {
+        const s = getStationById(toId);
+        if (s && s.lat!=null) {
+          map.setView([s.lat, s.lng], 15);
+          markers[s.id]?.openPopup();
+        } else {
+          alert('Coordinates missing for selected station. Please provide lat/lng.');
+        }
+        return;
+      }
+
+      // both selected -> route
+      const sFrom = getStationById(fromId);
+      const sTo = getStationById(toId);
+      if (!sFrom || !sTo) return;
+      if (sFrom.lat==null || sTo.lat==null) {
+        alert('Coordinates missing for one or both selected stations. Please supply lat/lng for both.');
+        return;
+      }
+
+      routingControl = L.Routing.control({
+        waypoints: [
+          L.latLng(sFrom.lat, sFrom.lng),
+          L.latLng(sTo.lat, sTo.lng)
+        ],
+        routeWhileDragging: false,
+        showAlternatives: false,
+        fitSelectedRoute: true,
+        createMarker: function(i, wp, n) {
+          // reuse our station markers if possible
+          const stationId = (i === 0) ? sFrom.id : sTo.id;
+          if (markers[stationId]) {
+            return markers[stationId].bindPopup(`<strong>${getStationById(stationId).name}</strong>`);
+          }
+          return L.marker(wp.latLng);
+        }
+      }).addTo(map);
+    }
+
+    document.getElementById('origin').addEventListener('change', buildRoute);
+    document.getElementById('destination').addEventListener('change', buildRoute);
+
+    document.getElementById('clearRoute').addEventListener('click', () => {
+      if (routingControl) {
+        map.removeControl(routingControl);
+        routingControl = null;
+      }
+      // reset view to fit markers
+      fitAll();
+      document.getElementById('origin').value = "0";
+      document.getElementById('destination').value = "0";
+    });
+
+  </script>
+</body>
+</html>

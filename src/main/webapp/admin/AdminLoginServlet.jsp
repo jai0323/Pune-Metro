@@ -14,7 +14,7 @@
     try {
         // Register JDBC driver
         Class.forName("com.mysql.jdbc.Driver");
-        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/pune_metro", "root", "");
+        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/pune_metro", "root", "password");
 
         // Execute SQL query to validate user
         String sql = "SELECT * FROM admin WHERE username = ? AND password = ?";

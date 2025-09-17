@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="metrocard_loginstyles.css">
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../css/styles.css">
 <title>Admin Login</title>
 <link rel="icon" type="images/jpg" href="https://www.punemetrorail.org/assets/images/logo.png">
 <style>

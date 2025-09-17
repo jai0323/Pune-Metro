@@ -99,7 +99,7 @@ try {
 <title>MetroCard Login</title>
 </head>
 <body>
-    <%@ include file="header.jsp" %>   
+    <%@ include file="header.html" %>   
 <div class="container-card">
     <h2>Forget Details</h2>
     <form action="forgetLoginDetails.jsp" method="post">

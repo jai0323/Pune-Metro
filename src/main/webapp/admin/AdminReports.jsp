@@ -283,7 +283,7 @@
                             <%
                                 String url = "jdbc:mysql://localhost:3306/pune_metro";
                                 String user = "root";
-                                String pass = "";
+                                String pass = "password";
                                 Connection con = null;
                                 con = DriverManager.getConnection(url, user, pass);
                                 

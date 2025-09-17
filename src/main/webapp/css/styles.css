@@ -165,10 +165,14 @@
     color: black;
 }
 
+
 .puneheading
 {
     padding-right: 235px;
-    font-size: 30px;
+    font-size: 25px;
+}
+header{
+	padding:0px;
 }
 nav {
     display: flex;
@@ -551,7 +555,7 @@ nav a{
 .plan-your-jrny-box1
 {
     padding: 0px 24px 24px 24px;
-    margin: 16px 0px 0px;
+    margin: 5px 5px ;
 }
 
 .plan-your-jrny-box-heading{

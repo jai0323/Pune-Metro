@@ -19,8 +19,8 @@
 <head> 
     <title>Welcome to Pune Metro</title> 
     <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" /> 
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="../metrocard/header.css" />
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -169,7 +169,7 @@
         <div class="Complaint">
           <a href="AdminComplaints.jsp">
             <div class="Complaint1">
-              <img src="images/complain.svg" alt="">
+              <img src="../images/complain.svg" alt="">
               Complaint
               <i class="fa-solid fa-angle-right"></i>
             </div>
@@ -197,7 +197,7 @@
         <div class="Ticket">
           <a href="AdminTicket.jsp">
             <div class="Ticket1">
-              <img src="./images/train.svg"alt="">
+              <img src="../images/train.svg"alt="">
               Ticket
               <i class="fa-solid fa-angle-right"></i>
             </div>
@@ -206,7 +206,7 @@
         <div class="lostandfound">
             <a href="AdminLostFound.jsp">
             <div class="lostandfound1">
-              <img src="images/bag-cross-svgrepo-com.svg" alt="">
+              <img src="../images/bag-cross-svgrepo-com.svg" alt="">
               Lost & Found
               <i class="fa-solid fa-angle-right"></i>
             </div>

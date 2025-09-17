@@ -17,7 +17,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
     <title>Admin Complaints</title>
     <link rel="icon" type="images/jpg" href="https://www.punemetrorail.org/assets/images/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -151,7 +151,7 @@
                                     <%
                                     String url = "jdbc:mysql://localhost:3306/pune_metro";
                                     String user = "root";
-                                    String pass = "";
+                                    String pass = "password";
                         
                                     try {
                                         Class.forName("com.mysql.jdbc.Driver");

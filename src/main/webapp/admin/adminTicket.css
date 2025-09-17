@@ -157,6 +157,9 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         text-align: center;
     }
+    .pbutton{
+       padding:10px;
+    }
     @media print {
     #printButton {
          display: none;

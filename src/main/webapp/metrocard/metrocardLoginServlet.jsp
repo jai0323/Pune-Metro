@@ -71,123 +71,140 @@ try{
 		    align-items: center;
 		}
 		
-		/* Metro Card Container */
-.metro-card-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
-    padding: 20px;
+				/* Metro Card Container */
+		.metro-card-container {
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    width: 100%;
+		    min-height: 100vh;
+		    padding: 20px;
+		}
+		
+		/* Card - Big Credit Card Style */
+		.metro-cardc {
+		    position: relative;
+		    width: 520px;  /* Larger width */
+		    height: 250px; /* Larger height */
+		    border-radius: 22px;
+		    overflow: hidden;
+		    text-align: left;
+		    background: rgba(255, 255, 255, 0.15); /* Transparent glassy effect */
+		    backdrop-filter: blur(12px);
+		    color: #fff;
+		    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+		    transition: transform 0.4s ease, box-shadow 0.4s ease;
+		    cursor: pointer;
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: space-between;
+		    padding: 25px;
+		    font-family: 'Poppins', sans-serif;
+		}
+		
+		/* Card Hover Effect */
+		.metro-cardc:hover {
+		    transform: translateY(-10px) scale(1.05);
+		    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+		}
+		
+		/* Card Header - top info/logo */
+		.card-header h1 {
+		    margin: 0;
+		    font-size: 1.4rem;
+		    font-weight: 700;
+		    letter-spacing: 1px;
+		    text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+		}
+		
+		/* Card Body */
+		.card-body {
+		    padding: 25px 20px;
+		    padding-right: 280px; /* Space for QR code */
+		    font-size: 1rem;
+		    position: relative;
+		    border:1px solid  #55528D;
+		    border-radius:0px 0px 10px 10px; 
+		}
+		
+		.card-body p {
+		    margin: 2px 0;
+		    font-weight: 500;
+		    font-size: 1.08rem;
+		}
+		
+		/* QR Code Styling */
+		.card-body img {
+		    width: 140px;   /* Bigger QR code */
+		    height: 140px;  
+		    border-radius: 14px;
+		    border: 2px solid rgba(255, 255, 255, 0.6);
+		    box-shadow: 0 5px 20px rgba(0,0,0,0.35);
+		    position: absolute;
+		    bottom: 25px;
+		    right: 20px;
+		    transition: transform 0.3s ease;
+		}
+		
+		.card-body img:hover {
+		    transform: scale(1.1);
+		}
+		
+		/* Card Footer - buttons below card */
+		.card-footer {
+		    display: flex;
+		    flex-direction: column;
+		    align-items: center;
+		    margin-top: 20px;
+		    gap: 12px;
+		}
+		
+		/* Buttons */
+		.card-footer form input[type="submit"],
+		.card-footer button {
+		    width: 200px;         /* Fixed width for uniform buttons */
+		    padding: 12px 0;      /* Vertical padding */
+		    border-radius: 25px;  /* Rounded edges */
+		    font-size: 1.05rem;
+		    font-weight: 600;
+		    border: none;
+		    cursor: pointer;
+		    background-color: #55528D; /* Solid purple background */
+		    color: #fff;               /* White text */
+		    text-align: center;
+		    transition: all 0.3s ease;
+		}
+		
+		/* Hover Effect */
+		.card-footer form input[type="submit"]:hover,
+		.card-footer button:hover {
+		    transform: scale(1.05);
+		    background-color: #3e3b6d; /* Slightly darker purple on hover */
+		}
+		.user-info {
+	    position: absolute;
+	    top: 130px;     /* adjust distance from top */
+	    right: 25px;   /* adjust distance from right */
+	    font-size: 1rem;
+	    font-weight: 600;
+	    color: white;  /* change as per background */
+	    background: rgba(0,0,0,0.4); 
+	    padding: 6px 12px;
+	    border-radius: 8px;
 }
-
-/* Card - Big Credit Card Style */
-.metro-cardc {
-    position: relative;
-    width: 520px;  /* Larger width */
-    height: 250px; /* Larger height */
-    border-radius: 22px;
-    overflow: hidden;
-    text-align: left;
-    background: rgba(255, 255, 255, 0.15); /* Transparent glassy effect */
-    backdrop-filter: blur(12px);
-    color: #fff;
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 25px;
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Card Hover Effect */
-.metro-cardc:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
-}
-
-/* Card Header - top info/logo */
-.card-header h1 {
-    margin: 0;
-    font-size: 1.4rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-shadow: 0 2px 5px rgba(0,0,0,0.3);
-}
-
-/* Card Body */
-.card-body {
-    padding: 25px 20px;
-    padding-right: 280px; /* Space for QR code */
-    font-size: 1rem;
-    position: relative;
-}
-
-.card-body p {
-    margin: 2px 0;
-    font-weight: 500;
-    font-size: 1.08rem;
-}
-
-/* QR Code Styling */
-.card-body img {
-    width: 140px;   /* Bigger QR code */
-    height: 140px;  
-    border-radius: 14px;
-    border: 2px solid rgba(255, 255, 255, 0.6);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.35);
-    position: absolute;
-    bottom: 25px;
-    right: 20px;
-    transition: transform 0.3s ease;
-}
-
-.card-body img:hover {
-    transform: scale(1.1);
-}
-
-/* Card Footer - buttons below card */
-.card-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    gap: 12px;
-}
-
-/* Buttons */
-.card-footer form input[type="submit"],
-.card-footer button {
-    width: 200px;         /* Fixed width for uniform buttons */
-    padding: 12px 0;      /* Vertical padding */
-    border-radius: 25px;  /* Rounded edges */
-    font-size: 1.05rem;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    background-color: #55528D; /* Solid purple background */
-    color: #fff;               /* White text */
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-/* Hover Effect */
-.card-footer form input[type="submit"]:hover,
-.card-footer button:hover {
-    transform: scale(1.05);
-    background-color: #3e3b6d; /* Slightly darker purple on hover */
-}
-
-
-
+		
+		
+		
 		
      </style>
     
 </head>
 <body>
     <%@ include file="header.jsp" %>    
+	    <div class="user-info">
+		    Welcome, <%= n %>
+		</div>
+    
     <div class="metro-card-container">
     <div class="metro-cardc">
         <!-- Card Top (Header / Logo area) -->
@@ -223,20 +240,22 @@ try{
             <!-- QR Code positioned like a card chip -->
             <img src="" id="img" alt="QR Code">
         </div>
-    
+             
             
         </div> 
-            <div class="card-footer">
+          <div class="card-footer">
+           
             <form action="transactionHistory.jsp" method="post">
                 <input type="submit" value="Transaction History">
-            </form> <br>
-           
+            </form>
+            <button id="downloadBtn" style="margin-left:-120px; margin-top:10px ; width:200px ;height:50px">Download Metro Card</button>
+            
             <form action="Logout.jsp" method="post">
                 <input type="submit" value="Logout">
-            </form>  <br>
-             <button id="downloadBtn"">Download Metro Card</button>
+            </form>
+                        
+            </div>
                           
-        </div>
     </div>
 </body> 
 <script src="index.js"></script>    

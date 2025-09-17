@@ -35,7 +35,7 @@ function redirectToFareCalculatorPage() {
     if(sourceIndex!=0&&destinationIndex!=0)
     {
 
-        window.location.href = 'farecalculator.html';
+        window.location.href = 'farecalculator.jsp';
     }
     else
     {
