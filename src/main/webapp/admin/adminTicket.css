@@ -1,0 +1,164 @@
+.line {
+    position: relative;
+    }
+
+    .line::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 7%; /* Adjust the width as needed */
+        height: 5px; /* Adjust the thickness of the underline */
+        background-color: rgb(208, 68, 136);
+    }
+    #farecalculatorheading{
+        font-size: 30px;
+        margin-left: 100px;
+        
+    }
+    #farecalculatorheading h2{
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: #55528dce;
+    }
+    
+    .fare-calculator-box{
+        border: 0.5px solid grey;
+        height: 190px;
+        width: 1330px;
+        border-radius: 16px;
+        margin-left: 90px;  
+        margin-top: 60px; 
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .fare-calculator-box1{
+        padding-top: 20px;
+        margin-left: 40px;
+    }
+    .fare-calculator-box-selection select
+    {
+        height: 40px;
+        width: 400px;
+        font-size: 16px;
+        margin-left: 45px;
+        border: 1px solid rgb(50, 25, 148);
+        border-radius: 8px;
+        background-color: white;
+        transition: transform 0.3s ease;  
+
+    }
+
+    .fare-calculator-box-selection label{
+        margin-left: 10px;
+        color: #ca5ca6;
+        font-size: 18px;
+    }
+    .fare-calculator-box-selection input
+    {
+        height: 38px;
+        width: 150px;
+        background-color: #ca5ca6;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        margin-left: 50px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+    .fare-calculator-box-selection input:hover{
+        background-color: blueviolet;
+    }
+    .fare-calculator-box-selection select:hover{
+        border: 3px solid rgb(142, 142, 225);
+        transform: matrix();
+    }
+    .fare-calculator-box-selection option:hover{
+        background-color: blue;
+    }
+    .source-destination{
+        display: flex;
+        align-items: center;
+    }
+    .s-d{
+        margin-top: 50px;
+        font-size: 20px;
+    }
+    #fromlabel
+    {
+        margin-left: 10px;
+        color: rgba(43, 38, 38, 0.642);
+        margin-top: 50px;
+
+    }
+    #tolabel{
+        margin-left: 50px;
+        color: rgba(43, 38, 38, 0.642);
+        margin-top: 25px;
+
+
+    }
+    #fare{
+    font-size: 23px;
+    }
+    .rupeesicon{
+        margin-top: 24px;
+        size: 20px;
+        color: #ca5ca6;
+    }
+
+    .totalfare
+    {
+        
+        padding-left: 10px;
+        padding-top: 9px;
+        font-family: "Ubuntu", sans-serif;
+
+    }
+    #fareResult
+    {
+        color: #cc3e9d;
+        font-size: 29px;
+        font-family: "Ubuntu", sans-serif;
+    }
+    #selectedSource{
+        margin-left: 5px;
+        text-decoration: bold;
+        font-size: 24px;
+        font-family: "Ubuntu", sans-serif;
+    }
+    #selectedDestination{
+        margin-left: 5px;
+        text-decoration: bold;
+        font-size: 24px;
+        font-family: "Ubuntu", sans-serif;
+    }
+    .fareimg
+    {
+        height: 45px;
+    }
+    .ticketbox{
+        border: 0.5px solid grey;
+        height: auto;
+        width: 200px;
+        border-radius: 16px;
+        margin-left: 10px;  
+        margin-top: 10px; 
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+        padding:10px;
+        text-align: center;
+       
+    }
+    .container {
+        width: fit-content;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    @media print {
+    #printButton {
+         display: none;
+    }
+    }
